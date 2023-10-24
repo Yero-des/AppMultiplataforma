@@ -1,48 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/router/app_router.dart';
 
 class HomeScreen extends StatelessWidget {
    
   const HomeScreen({Key? key}) : super(key: key);
-  
-  final options = const ['Alertas','Nosotros', 'Lista'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Opciones"),
+        title: const Text("Options"),
         elevation: 0,
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.green,
       ),
+      
       body: ListView(
         children: [
-          ... options.map((value) => ListTile(
+          ... AppRoutes.menuOptions.map((value) => ListTile(
             
-            // Icono izquierda
-            leading: const Icon(
-              Icons.keyboard_option_key,
-              color: Colors.indigoAccent,
+            leading: Icon(
+              value.data, // Acceso a la propiedad 'data' de MenuOption
+              color: Colors.blueAccent, // Acceso a la propiedad 'color' de MenuOption
             ),
 
             // Texto content
-            title: Text(value),
-
-            // Icono derecha
-            trailing: const Icon(
-              Icons.info_rounded,
-              color: Colors.indigoAccent
-            ),
+            title: Text(value.name),
 
             onTap: () => {   
-              if (value.toLowerCase() == "alertas") {
-                Navigator.pushNamed(context, 'alert')
-              } else if (value.toLowerCase() == "nosotros") {
-                Navigator.pushNamed(context, 'about')
-              } else if (value.toLowerCase() == "lista") {
-                Navigator.pushNamed(context, 'list')
-              } else {
-                Navigator.pushNamed(context, 'error')
-              }
+              Navigator.pushNamed(context, value.router)
             },
 
           )).toList()
