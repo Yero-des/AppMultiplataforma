@@ -7,11 +7,11 @@ class AppRoutes {
   static const initialRoute = 'home';
 
   static final menuOptions = <MenuOption>[
-    MenuOption(router: 'home', data: Icons.house_sharp, name: 'Home Screen', color: Colors.black, widget: const HomeScreen()),
-    MenuOption(router: 'about', data: Icons.info_outline_rounded, name: 'About', color: Colors.blueAccent, widget: const NosotrosScreen()),
-    MenuOption(router: 'alert', data: Icons.crisis_alert_outlined, name: 'Alert', color: Colors.blueAccent, widget: const AlertScreen()),
-    MenuOption(router: 'list', data: Icons.line_style_rounded, name: 'List', color: Colors.redAccent, widget: const ListViewExample()),
-    MenuOption(router: 'list2', data: Icons.view_list_sharp, name: 'Second List', color: Colors.redAccent, widget: const ListView2Screen()),
+    MenuOption(router: 'home', data: Icons.house_sharp, name: 'Home Screen', widget: const HomeScreen(), color: Colors.black),
+    MenuOption(router: 'about', data: Icons.info_outline_rounded, name: 'About', widget: const NosotrosScreen(), color: Colors.black),
+    MenuOption(router: 'alert', data: Icons.crisis_alert_outlined, name: 'Alert', widget: const AlertScreen(), color: Colors.black),
+    MenuOption(router: 'list', data: Icons.line_style_rounded, name: 'List', widget: const ListViewExample(), color: Colors.blueAccent),
+    MenuOption(router: 'list2', data: Icons.view_list_sharp, name: 'Second List', widget: const ListView2Screen(), color: Colors.blueAccent),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){
