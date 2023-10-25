@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/profile_screen.dart';
 import '../screens/screens.dart';
 import '../models/menu_option.dart';
 
@@ -9,7 +8,7 @@ class AppRoutes {
 
   static final menuOptions = <MenuOption>[
     MenuOption(router: 'home', data: Icons.house_sharp, name: 'Home Screen', widget: const HomeScreen(), color: Colors.black),
-    MenuOption(router: 'profile', data: Icons.person_outline, name: 'Profile', widget: const ProfileScreen(), color: Colors.black),
+    MenuOption(router: 'profile', data: Icons.person_outline, name: 'Profile', widget: const AvatarScreen(), color: Colors.black),
     MenuOption(router: 'about', data: Icons.info_outline_rounded, name: 'About', widget: const NosotrosScreen(), color: Colors.black),
     MenuOption(router: 'alert', data: Icons.crisis_alert_outlined, name: 'Alert', widget: const AlertScreen(), color: Colors.blueAccent),
     MenuOption(router: 'list', data: Icons.line_style_rounded, name: 'List', widget: const ListViewExample(), color: Colors.blueAccent),

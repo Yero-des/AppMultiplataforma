@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/models.dart';
 import 'package:flutter_application_1/themes/theme.dart';
 
-class ProfileScreen extends StatelessWidget {
+class AvatarScreen extends StatelessWidget {
    
-  const ProfileScreen({Key? key}) : super(key: key);
+  const AvatarScreen({Key? key}) : super(key: key);
 
   static final profile = Profile(img: "assets/img/profile.jpg", name: "Yeromi", lastName: "Zavala Castillo", rol: "Developer");
   
