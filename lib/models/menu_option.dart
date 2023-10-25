@@ -16,6 +16,5 @@ class MenuOption {
     required this.widget,
     this.color
   }); // Inicializamos una variable con constructor
-  // {required} nos sirve para no tener orden en atributos
 
 }
