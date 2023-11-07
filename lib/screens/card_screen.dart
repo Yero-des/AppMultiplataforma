@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/widgets/widgets.dart';
 
 class NosotrosScreen extends StatelessWidget {
    
@@ -9,38 +10,19 @@ class NosotrosScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.keyboard_option_key),
-        title: const Text("Nosotros"),
+        title: const Text("Card Widget"),
         elevation: 0,
-        backgroundColor: Colors.blue,
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, 
-          crossAxisAlignment: CrossAxisAlignment.center,                    
-          children: [
-            Icon(
-              Icons.group_add_rounded,
-              color: Colors.blueAccent,
-              size: 60,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Nosotros',
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold
-              )
-            ),
-            SizedBox(height: 10),
-            Text(
-              'Esta es una breve descripción',
-              style: TextStyle(
-                fontSize: 15,
-              ),
-            )
-          ],
-        ),
-      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+        children: const [
+          CustomCardType1(),
+          SizedBox(height: 10,),
+          CustomCardType1(),
+          SizedBox(height: 10,),
+          CustomCardType2()
+        ],
+      )
     );
   }
 }
