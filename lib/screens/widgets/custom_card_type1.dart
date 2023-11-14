@@ -8,6 +8,12 @@ class CustomCardType1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      clipBehavior: Clip.antiAlias, // Un overflow hidden (importante)
+      shape: RoundedRectangleBorder( // Redondeo de bordes
+        borderRadius: BorderRadius.circular(15)
+      ),
+      elevation: 10,
+      // shadowColor: AppTheme.primary.withOpacity(0.8)
       child: Column(              
         children: [
           const ListTile(

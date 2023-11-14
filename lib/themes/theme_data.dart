@@ -15,6 +15,17 @@ class AppTheme {
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(foregroundColor: primary)
     ),
+    shadowColor: primary.withOpacity(0.5),
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: primary
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: primary,
+        shape: const StadiumBorder(),
+        elevation: 0
+      )
+    )
   );
 
   static final ThemeData yerodevDark = ThemeData.dark().copyWith(
