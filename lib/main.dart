@@ -20,7 +20,12 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRoute, // Activa la ruta por defecto 404
+      
+      // Cambio segun el tema del sistema
       theme: AppTheme.yerodevTheme, // ActualTheme
+      darkTheme: AppTheme.yerodevDark, // DartTheme
+      themeMode: ThemeMode.system,
+      
     );
 
   }

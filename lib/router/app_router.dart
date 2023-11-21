@@ -13,6 +13,8 @@ class AppRoutes {
     MenuOption(router: 'alert', data: Icons.crisis_alert_outlined, name: 'Alert', widget: const AlertScreen(), color: Colors.blueAccent),
     MenuOption(router: 'list', data: Icons.line_style_rounded, name: 'List', widget: const ListViewExample(), color: Colors.blueAccent),
     MenuOption(router: 'list2', data: Icons.view_list_sharp, name: 'Second List', widget: const ListView2Screen(), color: Colors.blueAccent),
+    MenuOption(router: 'profile_main', data: Icons.supervised_user_circle_outlined, name: 'Profile main', widget: const ProfileScreen(), color: Colors.redAccent),
+    MenuOption(router: 'animated', data: Icons.animation_outlined, name: "Animated", widget: const AnimatedScreen(), color: Colors.redAccent)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){

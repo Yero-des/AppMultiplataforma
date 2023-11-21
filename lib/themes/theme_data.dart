@@ -35,5 +35,5 @@ class AppTheme {
       elevation: 0
     ),
     iconTheme: const IconThemeData(color: primary)
-  );
+  );    
 }
